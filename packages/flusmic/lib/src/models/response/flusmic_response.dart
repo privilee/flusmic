@@ -9,7 +9,7 @@ part 'flusmic_response.g.dart';
 ///
 ///Handle all the data fetched from Prismic.io
 @Freezed(genericArgumentFactories: true)
-class FlusmicResponse<T> with _$FlusmicResponse<T> {
+abstract class FlusmicResponse<T> with _$FlusmicResponse<T> {
   ///Deafult factory constructor for FlusmicResponse
   factory FlusmicResponse({
     @JsonKey(name: 'results_per_page') required int resultsPerPage,

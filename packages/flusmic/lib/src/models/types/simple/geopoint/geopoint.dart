@@ -7,7 +7,7 @@ part 'geopoint.g.dart';
 ///
 ///Represents a map point with coordinates.
 @freezed
-class Geopoint with _$Geopoint {
+abstract class Geopoint with _$Geopoint {
   ///Deafult factory constructor for Geopoint
   factory Geopoint({
     required double latitude,

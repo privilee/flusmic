@@ -8,11 +8,11 @@ part of 'single_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_SingleModel _$$_SingleModelFromJson(Map json) => $checkedCreate(
-      r'_$_SingleModel',
+_SingleModel _$SingleModelFromJson(Map json) => $checkedCreate(
+      '_SingleModel',
       json,
       ($checkedConvert) {
-        final val = _$_SingleModel(
+        final val = _SingleModel(
           title: $checkedConvert(
               'title',
               (v) => (v as List<dynamic>)
@@ -24,7 +24,7 @@ _$_SingleModel _$$_SingleModelFromJson(Map json) => $checkedCreate(
       },
     );
 
-Map<String, dynamic> _$$_SingleModelToJson(_$_SingleModel instance) =>
+Map<String, dynamic> _$SingleModelToJson(_SingleModel instance) =>
     <String, dynamic>{
       'title': instance.title.map((e) => e.toJson()).toList(),
     };

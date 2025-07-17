@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,159 +9,319 @@ part of 'dimension.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-Dimension _$DimensionFromJson(Map<String, dynamic> json) {
-  return _Dimension.fromJson(json);
-}
 
 /// @nodoc
 mixin _$Dimension {
-  double get height => throw _privateConstructorUsedError;
-  double get width => throw _privateConstructorUsedError;
+  double get height;
+  double get width;
 
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $DimensionCopyWith<Dimension> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $DimensionCopyWith<$Res> {
-  factory $DimensionCopyWith(Dimension value, $Res Function(Dimension) then) =
-      _$DimensionCopyWithImpl<$Res, Dimension>;
-  @useResult
-  $Res call({double height, double width});
-}
-
-/// @nodoc
-class _$DimensionCopyWithImpl<$Res, $Val extends Dimension>
-    implements $DimensionCopyWith<$Res> {
-  _$DimensionCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
+  /// Create a copy of Dimension
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @pragma('vm:prefer-inline')
+  $DimensionCopyWith<Dimension> get copyWith =>
+      _$DimensionCopyWithImpl<Dimension>(this as Dimension, _$identity);
+
+  /// Serializes this Dimension to a JSON map.
+  Map<String, dynamic> toJson();
+
   @override
-  $Res call({
-    Object? height = null,
-    Object? width = null,
-  }) {
-    return _then(_value.copyWith(
-      height: null == height
-          ? _value.height
-          : height // ignore: cast_nullable_to_non_nullable
-              as double,
-      width: null == width
-          ? _value.width
-          : width // ignore: cast_nullable_to_non_nullable
-              as double,
-    ) as $Val);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is Dimension &&
+            (identical(other.height, height) || other.height == height) &&
+            (identical(other.width, width) || other.width == width));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, height, width);
+
+  @override
+  String toString() {
+    return 'Dimension(height: $height, width: $width)';
   }
 }
 
 /// @nodoc
-abstract class _$$_DimensionCopyWith<$Res> implements $DimensionCopyWith<$Res> {
-  factory _$$_DimensionCopyWith(
-          _$_Dimension value, $Res Function(_$_Dimension) then) =
-      __$$_DimensionCopyWithImpl<$Res>;
-  @override
+abstract mixin class $DimensionCopyWith<$Res> {
+  factory $DimensionCopyWith(Dimension value, $Res Function(Dimension) _then) =
+      _$DimensionCopyWithImpl;
   @useResult
   $Res call({double height, double width});
 }
 
 /// @nodoc
-class __$$_DimensionCopyWithImpl<$Res>
-    extends _$DimensionCopyWithImpl<$Res, _$_Dimension>
-    implements _$$_DimensionCopyWith<$Res> {
-  __$$_DimensionCopyWithImpl(
-      _$_Dimension _value, $Res Function(_$_Dimension) _then)
-      : super(_value, _then);
+class _$DimensionCopyWithImpl<$Res> implements $DimensionCopyWith<$Res> {
+  _$DimensionCopyWithImpl(this._self, this._then);
 
+  final Dimension _self;
+  final $Res Function(Dimension) _then;
+
+  /// Create a copy of Dimension
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? height = null,
     Object? width = null,
   }) {
-    return _then(_$_Dimension(
+    return _then(_self.copyWith(
       height: null == height
-          ? _value.height
+          ? _self.height
           : height // ignore: cast_nullable_to_non_nullable
               as double,
       width: null == width
-          ? _value.width
+          ? _self.width
           : width // ignore: cast_nullable_to_non_nullable
               as double,
     ));
   }
 }
 
+/// Adds pattern-matching-related methods to [Dimension].
+extension DimensionPatterns on Dimension {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_Dimension value)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _Dimension() when $default != null:
+        return $default(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_Dimension value) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _Dimension():
+        return $default(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_Dimension value)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _Dimension() when $default != null:
+        return $default(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(double height, double width)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _Dimension() when $default != null:
+        return $default(_that.height, _that.width);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(double height, double width) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _Dimension():
+        return $default(_that.height, _that.width);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(double height, double width)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _Dimension() when $default != null:
+        return $default(_that.height, _that.width);
+      case _:
+        return null;
+    }
+  }
+}
+
 /// @nodoc
 @JsonSerializable()
-class _$_Dimension implements _Dimension {
-  _$_Dimension({required this.height, required this.width});
-
-  factory _$_Dimension.fromJson(Map<String, dynamic> json) =>
-      _$$_DimensionFromJson(json);
+class _Dimension implements Dimension {
+  _Dimension({required this.height, required this.width});
+  factory _Dimension.fromJson(Map<String, dynamic> json) =>
+      _$DimensionFromJson(json);
 
   @override
   final double height;
   @override
   final double width;
 
+  /// Create a copy of Dimension
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  String toString() {
-    return 'Dimension(height: $height, width: $width)';
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$DimensionCopyWith<_Dimension> get copyWith =>
+      __$DimensionCopyWithImpl<_Dimension>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$DimensionToJson(
+      this,
+    );
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Dimension &&
+            other is _Dimension &&
             (identical(other.height, height) || other.height == height) &&
             (identical(other.width, width) || other.width == width));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, height, width);
 
-  @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
-  _$$_DimensionCopyWith<_$_Dimension> get copyWith =>
-      __$$_DimensionCopyWithImpl<_$_Dimension>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_DimensionToJson(
-      this,
-    );
+  String toString() {
+    return 'Dimension(height: $height, width: $width)';
   }
 }
 
-abstract class _Dimension implements Dimension {
-  factory _Dimension(
-      {required final double height,
-      required final double width}) = _$_Dimension;
-
-  factory _Dimension.fromJson(Map<String, dynamic> json) =
-      _$_Dimension.fromJson;
-
+/// @nodoc
+abstract mixin class _$DimensionCopyWith<$Res>
+    implements $DimensionCopyWith<$Res> {
+  factory _$DimensionCopyWith(
+          _Dimension value, $Res Function(_Dimension) _then) =
+      __$DimensionCopyWithImpl;
   @override
-  double get height;
-  @override
-  double get width;
-  @override
-  @JsonKey(ignore: true)
-  _$$_DimensionCopyWith<_$_Dimension> get copyWith =>
-      throw _privateConstructorUsedError;
+  @useResult
+  $Res call({double height, double width});
 }
+
+/// @nodoc
+class __$DimensionCopyWithImpl<$Res> implements _$DimensionCopyWith<$Res> {
+  __$DimensionCopyWithImpl(this._self, this._then);
+
+  final _Dimension _self;
+  final $Res Function(_Dimension) _then;
+
+  /// Create a copy of Dimension
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? height = null,
+    Object? width = null,
+  }) {
+    return _then(_Dimension(
+      height: null == height
+          ? _self.height
+          : height // ignore: cast_nullable_to_non_nullable
+              as double,
+      width: null == width
+          ? _self.width
+          : width // ignore: cast_nullable_to_non_nullable
+              as double,
+    ));
+  }
+}
+
+// dart format on

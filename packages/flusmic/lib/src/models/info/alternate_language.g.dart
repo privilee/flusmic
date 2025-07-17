@@ -8,11 +8,11 @@ part of 'alternate_language.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_AlternateLanguage _$$_AlternateLanguageFromJson(Map json) => $checkedCreate(
-      r'_$_AlternateLanguage',
+_AlternateLanguage _$AlternateLanguageFromJson(Map json) => $checkedCreate(
+      '_AlternateLanguage',
       json,
       ($checkedConvert) {
-        final val = _$_AlternateLanguage(
+        final val = _AlternateLanguage(
           id: $checkedConvert('id', (v) => v as String),
           lang: $checkedConvert('lang', (v) => v as String),
           type: $checkedConvert('type', (v) => v as String),
@@ -21,8 +21,7 @@ _$_AlternateLanguage _$$_AlternateLanguageFromJson(Map json) => $checkedCreate(
       },
     );
 
-Map<String, dynamic> _$$_AlternateLanguageToJson(
-        _$_AlternateLanguage instance) =>
+Map<String, dynamic> _$AlternateLanguageToJson(_AlternateLanguage instance) =>
     <String, dynamic>{
       'id': instance.id,
       'lang': instance.lang,

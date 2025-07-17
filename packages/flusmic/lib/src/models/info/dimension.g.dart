@@ -8,11 +8,11 @@ part of 'dimension.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Dimension _$$_DimensionFromJson(Map json) => $checkedCreate(
-      r'_$_Dimension',
+_Dimension _$DimensionFromJson(Map json) => $checkedCreate(
+      '_Dimension',
       json,
       ($checkedConvert) {
-        final val = _$_Dimension(
+        final val = _Dimension(
           height: $checkedConvert('height', (v) => (v as num).toDouble()),
           width: $checkedConvert('width', (v) => (v as num).toDouble()),
         );
@@ -20,7 +20,7 @@ _$_Dimension _$$_DimensionFromJson(Map json) => $checkedCreate(
       },
     );
 
-Map<String, dynamic> _$$_DimensionToJson(_$_Dimension instance) =>
+Map<String, dynamic> _$DimensionToJson(_Dimension instance) =>
     <String, dynamic>{
       'height': instance.height,
       'width': instance.width,

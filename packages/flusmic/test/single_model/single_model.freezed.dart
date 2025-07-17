@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,98 +9,237 @@ part of 'single_model.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-SingleModel _$SingleModelFromJson(Map<String, dynamic> json) {
-  return _SingleModel.fromJson(json);
-}
 
 /// @nodoc
 mixin _$SingleModel {
-  List<SimpleText> get title => throw _privateConstructorUsedError;
+  List<SimpleText> get title;
 
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $SingleModelCopyWith<SingleModel> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $SingleModelCopyWith<$Res> {
-  factory $SingleModelCopyWith(
-          SingleModel value, $Res Function(SingleModel) then) =
-      _$SingleModelCopyWithImpl<$Res, SingleModel>;
-  @useResult
-  $Res call({List<SimpleText> title});
-}
-
-/// @nodoc
-class _$SingleModelCopyWithImpl<$Res, $Val extends SingleModel>
-    implements $SingleModelCopyWith<$Res> {
-  _$SingleModelCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
+  /// Create a copy of SingleModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @pragma('vm:prefer-inline')
+  $SingleModelCopyWith<SingleModel> get copyWith =>
+      _$SingleModelCopyWithImpl<SingleModel>(this as SingleModel, _$identity);
+
+  /// Serializes this SingleModel to a JSON map.
+  Map<String, dynamic> toJson();
+
   @override
-  $Res call({
-    Object? title = null,
-  }) {
-    return _then(_value.copyWith(
-      title: null == title
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
-              as List<SimpleText>,
-    ) as $Val);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is SingleModel &&
+            const DeepCollectionEquality().equals(other.title, title));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(title));
+
+  @override
+  String toString() {
+    return 'SingleModel(title: $title)';
   }
 }
 
 /// @nodoc
-abstract class _$$_SingleModelCopyWith<$Res>
-    implements $SingleModelCopyWith<$Res> {
-  factory _$$_SingleModelCopyWith(
-          _$_SingleModel value, $Res Function(_$_SingleModel) then) =
-      __$$_SingleModelCopyWithImpl<$Res>;
-  @override
+abstract mixin class $SingleModelCopyWith<$Res> {
+  factory $SingleModelCopyWith(
+          SingleModel value, $Res Function(SingleModel) _then) =
+      _$SingleModelCopyWithImpl;
   @useResult
   $Res call({List<SimpleText> title});
 }
 
 /// @nodoc
-class __$$_SingleModelCopyWithImpl<$Res>
-    extends _$SingleModelCopyWithImpl<$Res, _$_SingleModel>
-    implements _$$_SingleModelCopyWith<$Res> {
-  __$$_SingleModelCopyWithImpl(
-      _$_SingleModel _value, $Res Function(_$_SingleModel) _then)
-      : super(_value, _then);
+class _$SingleModelCopyWithImpl<$Res> implements $SingleModelCopyWith<$Res> {
+  _$SingleModelCopyWithImpl(this._self, this._then);
 
+  final SingleModel _self;
+  final $Res Function(SingleModel) _then;
+
+  /// Create a copy of SingleModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? title = null,
   }) {
-    return _then(_$_SingleModel(
+    return _then(_self.copyWith(
       title: null == title
-          ? _value._title
+          ? _self.title
           : title // ignore: cast_nullable_to_non_nullable
               as List<SimpleText>,
     ));
   }
 }
 
+/// Adds pattern-matching-related methods to [SingleModel].
+extension SingleModelPatterns on SingleModel {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_SingleModel value)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _SingleModel() when $default != null:
+        return $default(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_SingleModel value) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _SingleModel():
+        return $default(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_SingleModel value)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _SingleModel() when $default != null:
+        return $default(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(List<SimpleText> title)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _SingleModel() when $default != null:
+        return $default(_that.title);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(List<SimpleText> title) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _SingleModel():
+        return $default(_that.title);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(List<SimpleText> title)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _SingleModel() when $default != null:
+        return $default(_that.title);
+      case _:
+        return null;
+    }
+  }
+}
+
 /// @nodoc
 @JsonSerializable()
-class _$_SingleModel implements _SingleModel {
-  _$_SingleModel({required final List<SimpleText> title}) : _title = title;
-
-  factory _$_SingleModel.fromJson(Map<String, dynamic> json) =>
-      _$$_SingleModelFromJson(json);
+class _SingleModel implements SingleModel {
+  _SingleModel({required final List<SimpleText> title}) : _title = title;
+  factory _SingleModel.fromJson(Map<String, dynamic> json) =>
+      _$SingleModelFromJson(json);
 
   final List<SimpleText> _title;
   @override
@@ -110,49 +249,72 @@ class _$_SingleModel implements _SingleModel {
     return EqualUnmodifiableListView(_title);
   }
 
+  /// Create a copy of SingleModel
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  String toString() {
-    return 'SingleModel(title: $title)';
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$SingleModelCopyWith<_SingleModel> get copyWith =>
+      __$SingleModelCopyWithImpl<_SingleModel>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$SingleModelToJson(
+      this,
+    );
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SingleModel &&
+            other is _SingleModel &&
             const DeepCollectionEquality().equals(other._title, _title));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(_title));
 
-  @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
-  _$$_SingleModelCopyWith<_$_SingleModel> get copyWith =>
-      __$$_SingleModelCopyWithImpl<_$_SingleModel>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_SingleModelToJson(
-      this,
-    );
+  String toString() {
+    return 'SingleModel(title: $title)';
   }
 }
 
-abstract class _SingleModel implements SingleModel {
-  factory _SingleModel({required final List<SimpleText> title}) =
-      _$_SingleModel;
-
-  factory _SingleModel.fromJson(Map<String, dynamic> json) =
-      _$_SingleModel.fromJson;
-
+/// @nodoc
+abstract mixin class _$SingleModelCopyWith<$Res>
+    implements $SingleModelCopyWith<$Res> {
+  factory _$SingleModelCopyWith(
+          _SingleModel value, $Res Function(_SingleModel) _then) =
+      __$SingleModelCopyWithImpl;
   @override
-  List<SimpleText> get title;
-  @override
-  @JsonKey(ignore: true)
-  _$$_SingleModelCopyWith<_$_SingleModel> get copyWith =>
-      throw _privateConstructorUsedError;
+  @useResult
+  $Res call({List<SimpleText> title});
 }
+
+/// @nodoc
+class __$SingleModelCopyWithImpl<$Res> implements _$SingleModelCopyWith<$Res> {
+  __$SingleModelCopyWithImpl(this._self, this._then);
+
+  final _SingleModel _self;
+  final $Res Function(_SingleModel) _then;
+
+  /// Create a copy of SingleModel
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? title = null,
+  }) {
+    return _then(_SingleModel(
+      title: null == title
+          ? _self._title
+          : title // ignore: cast_nullable_to_non_nullable
+              as List<SimpleText>,
+    ));
+  }
+}
+
+// dart format on

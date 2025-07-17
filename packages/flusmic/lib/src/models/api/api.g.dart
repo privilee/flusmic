@@ -8,11 +8,11 @@ part of 'api.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Api _$$_ApiFromJson(Map json) => $checkedCreate(
-      r'_$_Api',
+_Api _$ApiFromJson(Map json) => $checkedCreate(
+      '_Api',
       json,
       ($checkedConvert) {
-        final val = _$_Api(
+        final val = _Api(
           languages: $checkedConvert(
               'languages',
               (v) => (v as List<dynamic>)
@@ -42,7 +42,7 @@ _$_Api _$$_ApiFromJson(Map json) => $checkedCreate(
       },
     );
 
-Map<String, dynamic> _$$_ApiToJson(_$_Api instance) => <String, dynamic>{
+Map<String, dynamic> _$ApiToJson(_Api instance) => <String, dynamic>{
       'languages': instance.languages.map((e) => e.toJson()).toList(),
       'refs': instance.refs.map((e) => e.toJson()).toList(),
       'version': instance.version,

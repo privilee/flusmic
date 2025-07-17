@@ -8,7 +8,7 @@ part 'simple_image.g.dart';
 ///
 ///Represents a image inside RichText
 @freezed
-class SimpleImage with _$SimpleImage {
+abstract class SimpleImage with _$SimpleImage {
   ///Default constructor
   factory SimpleImage({
     required Dimension dimensions,

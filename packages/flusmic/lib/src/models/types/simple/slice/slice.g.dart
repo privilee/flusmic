@@ -8,11 +8,11 @@ part of 'slice.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Slice _$$_SliceFromJson(Map json) => $checkedCreate(
-      r'_$_Slice',
+_Slice _$SliceFromJson(Map json) => $checkedCreate(
+      '_Slice',
       json,
       ($checkedConvert) {
-        final val = _$_Slice(
+        final val = _Slice(
           sliceType: $checkedConvert('slice_type', (v) => v as String?),
           sliceLabel: $checkedConvert('slice_label', (v) => v as String?),
           items: $checkedConvert(
@@ -34,7 +34,7 @@ _$_Slice _$$_SliceFromJson(Map json) => $checkedCreate(
       },
     );
 
-Map<String, dynamic> _$$_SliceToJson(_$_Slice instance) => <String, dynamic>{
+Map<String, dynamic> _$SliceToJson(_Slice instance) => <String, dynamic>{
       'slice_type': instance.sliceType,
       'slice_label': instance.sliceLabel,
       'items': instance.items,

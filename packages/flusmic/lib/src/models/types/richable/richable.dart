@@ -12,7 +12,7 @@ part 'richable.g.dart';
 ///
 ///`RichableParagraph`, `RichableImage` or a `RichableEmbed`
 @Freezed(unionKey: 'type', unionValueCase: FreezedUnionCase.kebab)
-class Richable with _$Richable {
+abstract class Richable with _$Richable {
   ///RichableHeading1 model
   ///
   ///Represents a heading1 inside RichText

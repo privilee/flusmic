@@ -8,11 +8,11 @@ part of 'embed_data.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_EmbedData _$$_EmbedDataFromJson(Map json) => $checkedCreate(
-      r'_$_EmbedData',
+_EmbedData _$EmbedDataFromJson(Map json) => $checkedCreate(
+      '_EmbedData',
       json,
       ($checkedConvert) {
-        final val = _$_EmbedData(
+        final val = _EmbedData(
           authorName: $checkedConvert('author_name', (v) => v as String),
           authorUrl: $checkedConvert('author_url', (v) => v as String),
           embedUrl: $checkedConvert('embed_url', (v) => v as String),
@@ -44,7 +44,7 @@ _$_EmbedData _$$_EmbedDataFromJson(Map json) => $checkedCreate(
       },
     );
 
-Map<String, dynamic> _$$_EmbedDataToJson(_$_EmbedData instance) =>
+Map<String, dynamic> _$EmbedDataToJson(_EmbedData instance) =>
     <String, dynamic>{
       'author_name': instance.authorName,
       'author_url': instance.authorUrl,

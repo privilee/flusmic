@@ -8,15 +8,15 @@ part of 'document.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Document<T> _$$_DocumentFromJson<T>(
+_Document<T> _$DocumentFromJson<T>(
   Map json,
   T Function(Object? json) fromJsonT,
 ) =>
     $checkedCreate(
-      r'_$_Document',
+      '_Document',
       json,
       ($checkedConvert) {
-        final val = _$_Document<T>(
+        final val = _Document<T>(
           tags: $checkedConvert('tags',
               (v) => (v as List<dynamic>).map((e) => e as String).toList()),
           id: $checkedConvert('id', (v) => v as String),
@@ -51,8 +51,8 @@ _$_Document<T> _$$_DocumentFromJson<T>(
       },
     );
 
-Map<String, dynamic> _$$_DocumentToJson<T>(
-  _$_Document<T> instance,
+Map<String, dynamic> _$DocumentToJson<T>(
+  _Document<T> instance,
   Object? Function(T value) toJsonT,
 ) =>
     <String, dynamic>{

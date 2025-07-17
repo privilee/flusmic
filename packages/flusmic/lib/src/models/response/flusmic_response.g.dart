@@ -8,25 +8,27 @@ part of 'flusmic_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_FlusmicResponse<T> _$$_FlusmicResponseFromJson<T>(
+_FlusmicResponse<T> _$FlusmicResponseFromJson<T>(
   Map json,
   T Function(Object? json) fromJsonT,
 ) =>
     $checkedCreate(
-      r'_$_FlusmicResponse',
+      '_FlusmicResponse',
       json,
       ($checkedConvert) {
-        final val = _$_FlusmicResponse<T>(
-          resultsPerPage: $checkedConvert('results_per_page', (v) => v as int),
-          resultsSize: $checkedConvert('results_size', (v) => v as int),
-          totalPages: $checkedConvert('total_pages', (v) => v as int),
+        final val = _FlusmicResponse<T>(
+          resultsPerPage:
+              $checkedConvert('results_per_page', (v) => (v as num).toInt()),
+          resultsSize:
+              $checkedConvert('results_size', (v) => (v as num).toInt()),
+          totalPages: $checkedConvert('total_pages', (v) => (v as num).toInt()),
           totalResultsSize:
-              $checkedConvert('total_results_size', (v) => v as int),
+              $checkedConvert('total_results_size', (v) => (v as num).toInt()),
           results: $checkedConvert(
               'results', (v) => (v as List<dynamic>).map(fromJsonT).toList()),
           license: $checkedConvert('license', (v) => v as String),
           version: $checkedConvert('version', (v) => v as String),
-          page: $checkedConvert('page', (v) => v as int),
+          page: $checkedConvert('page', (v) => (v as num).toInt()),
           nextPage: $checkedConvert('next_page', (v) => v as String?),
           prevPage: $checkedConvert('prev_page', (v) => v as String?),
         );
@@ -42,8 +44,8 @@ _$_FlusmicResponse<T> _$$_FlusmicResponseFromJson<T>(
       },
     );
 
-Map<String, dynamic> _$$_FlusmicResponseToJson<T>(
-  _$_FlusmicResponse<T> instance,
+Map<String, dynamic> _$FlusmicResponseToJson<T>(
+  _FlusmicResponse<T> instance,
   Object? Function(T value) toJsonT,
 ) =>
     <String, dynamic>{

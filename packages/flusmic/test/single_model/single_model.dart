@@ -5,7 +5,7 @@ part 'single_model.freezed.dart';
 part 'single_model.g.dart';
 
 @freezed
-class SingleModel with _$SingleModel {
+abstract class SingleModel with _$SingleModel {
   factory SingleModel({
     required List<SimpleText> title,
   }) = _SingleModel;

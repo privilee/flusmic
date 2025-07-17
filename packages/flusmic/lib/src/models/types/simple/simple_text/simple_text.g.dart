@@ -8,11 +8,11 @@ part of 'simple_text.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_SimpleText _$$_SimpleTextFromJson(Map json) => $checkedCreate(
-      r'_$_SimpleText',
+_SimpleText _$SimpleTextFromJson(Map json) => $checkedCreate(
+      '_SimpleText',
       json,
       ($checkedConvert) {
-        final val = _$_SimpleText(
+        final val = _SimpleText(
           spans: $checkedConvert(
               'spans',
               (v) => (v as List<dynamic>)
@@ -26,7 +26,7 @@ _$_SimpleText _$$_SimpleTextFromJson(Map json) => $checkedCreate(
       },
     );
 
-Map<String, dynamic> _$$_SimpleTextToJson(_$_SimpleText instance) =>
+Map<String, dynamic> _$SimpleTextToJson(_SimpleText instance) =>
     <String, dynamic>{
       'spans': instance.spans.map((e) => e.toJson()).toList(),
       'text': instance.text,

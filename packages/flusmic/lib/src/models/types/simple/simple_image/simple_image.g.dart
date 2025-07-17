@@ -8,11 +8,11 @@ part of 'simple_image.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_SimpleImage _$$_SimpleImageFromJson(Map json) => $checkedCreate(
-      r'_$_SimpleImage',
+_SimpleImage _$SimpleImageFromJson(Map json) => $checkedCreate(
+      '_SimpleImage',
       json,
       ($checkedConvert) {
-        final val = _$_SimpleImage(
+        final val = _SimpleImage(
           dimensions: $checkedConvert('dimensions',
               (v) => Dimension.fromJson(Map<String, dynamic>.from(v as Map))),
           url: $checkedConvert('url', (v) => v as String),
@@ -23,7 +23,7 @@ _$_SimpleImage _$$_SimpleImageFromJson(Map json) => $checkedCreate(
       },
     );
 
-Map<String, dynamic> _$$_SimpleImageToJson(_$_SimpleImage instance) =>
+Map<String, dynamic> _$SimpleImageToJson(_SimpleImage instance) =>
     <String, dynamic>{
       'dimensions': instance.dimensions.toJson(),
       'url': instance.url,

@@ -7,7 +7,7 @@ part 'ordering.freezed.dart';
 ///Create a new ordering that handle the data for
 ///querying.
 @freezed
-class Ordering with _$Ordering {
+abstract class Ordering with _$Ordering {
   ///Custom type Ordering constructor
   const factory Ordering.type(
     String customType,

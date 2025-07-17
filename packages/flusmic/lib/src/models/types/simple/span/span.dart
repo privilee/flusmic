@@ -8,12 +8,13 @@ part 'span.g.dart';
 ///Handle data for text span.
 ///Marks the [type] and where it [start] and where it [end]
 @freezed
-class Span with _$Span {
+abstract class Span with _$Span {
   ///Deafult factory constructor for Span
   factory Span({
     required String type,
     required int end,
     required int start,
+    required Map<String, dynamic> data,
   }) = _Span;
 
   ///Creates a Span object from json

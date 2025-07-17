@@ -11,7 +11,7 @@ part 'api.g.dart';
 ///
 ///Handle Prismic.io entrypoint data for querying.
 @freezed
-class Api with _$Api {
+abstract class Api with _$Api {
   ///Deafult factory constructor for Ref
   factory Api({
     required List<Language> languages,

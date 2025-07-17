@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,40 +9,119 @@ part of 'ordering.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$Ordering {
-  bool get descending => throw _privateConstructorUsedError;
+  bool get descending;
+
+  /// Create a copy of Ordering
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $OrderingCopyWith<Ordering> get copyWith =>
+      _$OrderingCopyWithImpl<Ordering>(this as Ordering, _$identity);
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is Ordering &&
+            (identical(other.descending, descending) ||
+                other.descending == descending));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, descending);
+
+  @override
+  String toString() {
+    return 'Ordering(descending: $descending)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $OrderingCopyWith<$Res> {
+  factory $OrderingCopyWith(Ordering value, $Res Function(Ordering) _then) =
+      _$OrderingCopyWithImpl;
+  @useResult
+  $Res call({bool descending});
+}
+
+/// @nodoc
+class _$OrderingCopyWithImpl<$Res> implements $OrderingCopyWith<$Res> {
+  _$OrderingCopyWithImpl(this._self, this._then);
+
+  final Ordering _self;
+  final $Res Function(Ordering) _then;
+
+  /// Create a copy of Ordering
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? descending = null,
+  }) {
+    return _then(_self.copyWith(
+      descending: null == descending
+          ? _self.descending
+          : descending // ignore: cast_nullable_to_non_nullable
+              as bool,
+    ));
+  }
+}
+
+/// Adds pattern-matching-related methods to [Ordering].
+extension OrderingPatterns on Ordering {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
   @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(String customType, String field, bool descending)
-        type,
-    required TResult Function(String type, bool descending) document,
-    required TResult Function(bool descending) firstPublicationDate,
-    required TResult Function(bool descending) lastPublicationDate,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String customType, String field, bool descending)? type,
-    TResult? Function(String type, bool descending)? document,
-    TResult? Function(bool descending)? firstPublicationDate,
-    TResult? Function(bool descending)? lastPublicationDate,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String customType, String field, bool descending)? type,
-    TResult Function(String type, bool descending)? document,
-    TResult Function(bool descending)? firstPublicationDate,
-    TResult Function(bool descending)? lastPublicationDate,
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(TypeOrdering value)? type,
+    TResult Function(DocumentOrdering value)? document,
+    TResult Function(FirstPublicationDateOrdering value)? firstPublicationDate,
+    TResult Function(LastPublicationDateOrdering value)? lastPublicationDate,
     required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
+  }) {
+    final _that = this;
+    switch (_that) {
+      case TypeOrdering() when type != null:
+        return type(_that);
+      case DocumentOrdering() when document != null:
+        return document(_that);
+      case FirstPublicationDateOrdering() when firstPublicationDate != null:
+        return firstPublicationDate(_that);
+      case LastPublicationDateOrdering() when lastPublicationDate != null:
+        return lastPublicationDate(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(TypeOrdering value) type,
@@ -51,129 +130,186 @@ mixin _$Ordering {
         firstPublicationDate,
     required TResult Function(LastPublicationDateOrdering value)
         lastPublicationDate,
-  }) =>
-      throw _privateConstructorUsedError;
+  }) {
+    final _that = this;
+    switch (_that) {
+      case TypeOrdering():
+        return type(_that);
+      case DocumentOrdering():
+        return document(_that);
+      case FirstPublicationDateOrdering():
+        return firstPublicationDate(_that);
+      case LastPublicationDateOrdering():
+        return lastPublicationDate(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(TypeOrdering value)? type,
     TResult? Function(DocumentOrdering value)? document,
     TResult? Function(FirstPublicationDateOrdering value)? firstPublicationDate,
     TResult? Function(LastPublicationDateOrdering value)? lastPublicationDate,
-  }) =>
-      throw _privateConstructorUsedError;
+  }) {
+    final _that = this;
+    switch (_that) {
+      case TypeOrdering() when type != null:
+        return type(_that);
+      case DocumentOrdering() when document != null:
+        return document(_that);
+      case FirstPublicationDateOrdering() when firstPublicationDate != null:
+        return firstPublicationDate(_that);
+      case LastPublicationDateOrdering() when lastPublicationDate != null:
+        return lastPublicationDate(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(TypeOrdering value)? type,
-    TResult Function(DocumentOrdering value)? document,
-    TResult Function(FirstPublicationDateOrdering value)? firstPublicationDate,
-    TResult Function(LastPublicationDateOrdering value)? lastPublicationDate,
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String customType, String field, bool descending)? type,
+    TResult Function(String type, bool descending)? document,
+    TResult Function(bool descending)? firstPublicationDate,
+    TResult Function(bool descending)? lastPublicationDate,
     required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
-
-  @JsonKey(ignore: true)
-  $OrderingCopyWith<Ordering> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $OrderingCopyWith<$Res> {
-  factory $OrderingCopyWith(Ordering value, $Res Function(Ordering) then) =
-      _$OrderingCopyWithImpl<$Res, Ordering>;
-  @useResult
-  $Res call({bool descending});
-}
-
-/// @nodoc
-class _$OrderingCopyWithImpl<$Res, $Val extends Ordering>
-    implements $OrderingCopyWith<$Res> {
-  _$OrderingCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? descending = null,
   }) {
-    return _then(_value.copyWith(
-      descending: null == descending
-          ? _value.descending
-          : descending // ignore: cast_nullable_to_non_nullable
-              as bool,
-    ) as $Val);
+    final _that = this;
+    switch (_that) {
+      case TypeOrdering() when type != null:
+        return type(_that.customType, _that.field, _that.descending);
+      case DocumentOrdering() when document != null:
+        return document(_that.type, _that.descending);
+      case FirstPublicationDateOrdering() when firstPublicationDate != null:
+        return firstPublicationDate(_that.descending);
+      case LastPublicationDateOrdering() when lastPublicationDate != null:
+        return lastPublicationDate(_that.descending);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String customType, String field, bool descending)
+        type,
+    required TResult Function(String type, bool descending) document,
+    required TResult Function(bool descending) firstPublicationDate,
+    required TResult Function(bool descending) lastPublicationDate,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case TypeOrdering():
+        return type(_that.customType, _that.field, _that.descending);
+      case DocumentOrdering():
+        return document(_that.type, _that.descending);
+      case FirstPublicationDateOrdering():
+        return firstPublicationDate(_that.descending);
+      case LastPublicationDateOrdering():
+        return lastPublicationDate(_that.descending);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String customType, String field, bool descending)? type,
+    TResult? Function(String type, bool descending)? document,
+    TResult? Function(bool descending)? firstPublicationDate,
+    TResult? Function(bool descending)? lastPublicationDate,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case TypeOrdering() when type != null:
+        return type(_that.customType, _that.field, _that.descending);
+      case DocumentOrdering() when document != null:
+        return document(_that.type, _that.descending);
+      case FirstPublicationDateOrdering() when firstPublicationDate != null:
+        return firstPublicationDate(_that.descending);
+      case LastPublicationDateOrdering() when lastPublicationDate != null:
+        return lastPublicationDate(_that.descending);
+      case _:
+        return null;
+    }
   }
 }
 
 /// @nodoc
-abstract class _$$TypeOrderingCopyWith<$Res>
-    implements $OrderingCopyWith<$Res> {
-  factory _$$TypeOrderingCopyWith(
-          _$TypeOrdering value, $Res Function(_$TypeOrdering) then) =
-      __$$TypeOrderingCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({String customType, String field, bool descending});
-}
 
-/// @nodoc
-class __$$TypeOrderingCopyWithImpl<$Res>
-    extends _$OrderingCopyWithImpl<$Res, _$TypeOrdering>
-    implements _$$TypeOrderingCopyWith<$Res> {
-  __$$TypeOrderingCopyWithImpl(
-      _$TypeOrdering _value, $Res Function(_$TypeOrdering) _then)
-      : super(_value, _then);
+class TypeOrdering implements Ordering {
+  const TypeOrdering(this.customType, this.field, {this.descending = false});
 
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? customType = null,
-    Object? field = null,
-    Object? descending = null,
-  }) {
-    return _then(_$TypeOrdering(
-      null == customType
-          ? _value.customType
-          : customType // ignore: cast_nullable_to_non_nullable
-              as String,
-      null == field
-          ? _value.field
-          : field // ignore: cast_nullable_to_non_nullable
-              as String,
-      descending: null == descending
-          ? _value.descending
-          : descending // ignore: cast_nullable_to_non_nullable
-              as bool,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$TypeOrdering implements TypeOrdering {
-  const _$TypeOrdering(this.customType, this.field, {this.descending = false});
-
-  @override
   final String customType;
-  @override
   final String field;
   @override
   @JsonKey()
   final bool descending;
 
+  /// Create a copy of Ordering
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  String toString() {
-    return 'Ordering.type(customType: $customType, field: $field, descending: $descending)';
-  }
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $TypeOrderingCopyWith<TypeOrdering> get copyWith =>
+      _$TypeOrderingCopyWithImpl<TypeOrdering>(this, _$identity);
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$TypeOrdering &&
+            other is TypeOrdering &&
             (identical(other.customType, customType) ||
                 other.customType == customType) &&
             (identical(other.field, field) || other.field == field) &&
@@ -184,136 +320,50 @@ class _$TypeOrdering implements TypeOrdering {
   @override
   int get hashCode => Object.hash(runtimeType, customType, field, descending);
 
-  @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
-  _$$TypeOrderingCopyWith<_$TypeOrdering> get copyWith =>
-      __$$TypeOrderingCopyWithImpl<_$TypeOrdering>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(String customType, String field, bool descending)
-        type,
-    required TResult Function(String type, bool descending) document,
-    required TResult Function(bool descending) firstPublicationDate,
-    required TResult Function(bool descending) lastPublicationDate,
-  }) {
-    return type(customType, field, descending);
+  String toString() {
+    return 'Ordering.type(customType: $customType, field: $field, descending: $descending)';
   }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String customType, String field, bool descending)? type,
-    TResult? Function(String type, bool descending)? document,
-    TResult? Function(bool descending)? firstPublicationDate,
-    TResult? Function(bool descending)? lastPublicationDate,
-  }) {
-    return type?.call(customType, field, descending);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String customType, String field, bool descending)? type,
-    TResult Function(String type, bool descending)? document,
-    TResult Function(bool descending)? firstPublicationDate,
-    TResult Function(bool descending)? lastPublicationDate,
-    required TResult orElse(),
-  }) {
-    if (type != null) {
-      return type(customType, field, descending);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(TypeOrdering value) type,
-    required TResult Function(DocumentOrdering value) document,
-    required TResult Function(FirstPublicationDateOrdering value)
-        firstPublicationDate,
-    required TResult Function(LastPublicationDateOrdering value)
-        lastPublicationDate,
-  }) {
-    return type(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(TypeOrdering value)? type,
-    TResult? Function(DocumentOrdering value)? document,
-    TResult? Function(FirstPublicationDateOrdering value)? firstPublicationDate,
-    TResult? Function(LastPublicationDateOrdering value)? lastPublicationDate,
-  }) {
-    return type?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(TypeOrdering value)? type,
-    TResult Function(DocumentOrdering value)? document,
-    TResult Function(FirstPublicationDateOrdering value)? firstPublicationDate,
-    TResult Function(LastPublicationDateOrdering value)? lastPublicationDate,
-    required TResult orElse(),
-  }) {
-    if (type != null) {
-      return type(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class TypeOrdering implements Ordering {
-  const factory TypeOrdering(final String customType, final String field,
-      {final bool descending}) = _$TypeOrdering;
-
-  String get customType;
-  String get field;
-  @override
-  bool get descending;
-  @override
-  @JsonKey(ignore: true)
-  _$$TypeOrderingCopyWith<_$TypeOrdering> get copyWith =>
-      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$DocumentOrderingCopyWith<$Res>
+abstract mixin class $TypeOrderingCopyWith<$Res>
     implements $OrderingCopyWith<$Res> {
-  factory _$$DocumentOrderingCopyWith(
-          _$DocumentOrdering value, $Res Function(_$DocumentOrdering) then) =
-      __$$DocumentOrderingCopyWithImpl<$Res>;
+  factory $TypeOrderingCopyWith(
+          TypeOrdering value, $Res Function(TypeOrdering) _then) =
+      _$TypeOrderingCopyWithImpl;
   @override
   @useResult
-  $Res call({String type, bool descending});
+  $Res call({String customType, String field, bool descending});
 }
 
 /// @nodoc
-class __$$DocumentOrderingCopyWithImpl<$Res>
-    extends _$OrderingCopyWithImpl<$Res, _$DocumentOrdering>
-    implements _$$DocumentOrderingCopyWith<$Res> {
-  __$$DocumentOrderingCopyWithImpl(
-      _$DocumentOrdering _value, $Res Function(_$DocumentOrdering) _then)
-      : super(_value, _then);
+class _$TypeOrderingCopyWithImpl<$Res> implements $TypeOrderingCopyWith<$Res> {
+  _$TypeOrderingCopyWithImpl(this._self, this._then);
 
-  @pragma('vm:prefer-inline')
+  final TypeOrdering _self;
+  final $Res Function(TypeOrdering) _then;
+
+  /// Create a copy of Ordering
+  /// with the given fields replaced by the non-null parameter values.
   @override
+  @pragma('vm:prefer-inline')
   $Res call({
-    Object? type = null,
+    Object? customType = null,
+    Object? field = null,
     Object? descending = null,
   }) {
-    return _then(_$DocumentOrdering(
-      null == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
+    return _then(TypeOrdering(
+      null == customType
+          ? _self.customType
+          : customType // ignore: cast_nullable_to_non_nullable
+              as String,
+      null == field
+          ? _self.field
+          : field // ignore: cast_nullable_to_non_nullable
               as String,
       descending: null == descending
-          ? _value.descending
+          ? _self.descending
           : descending // ignore: cast_nullable_to_non_nullable
               as bool,
     ));
@@ -322,25 +372,27 @@ class __$$DocumentOrderingCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$DocumentOrdering implements DocumentOrdering {
-  const _$DocumentOrdering(this.type, {this.descending = false});
+class DocumentOrdering implements Ordering {
+  const DocumentOrdering(this.type, {this.descending = false});
 
-  @override
   final String type;
   @override
   @JsonKey()
   final bool descending;
 
+  /// Create a copy of Ordering
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  String toString() {
-    return 'Ordering.document(type: $type, descending: $descending)';
-  }
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $DocumentOrderingCopyWith<DocumentOrdering> get copyWith =>
+      _$DocumentOrderingCopyWithImpl<DocumentOrdering>(this, _$identity);
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$DocumentOrdering &&
+            other is DocumentOrdering &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.descending, descending) ||
                 other.descending == descending));
@@ -349,132 +401,46 @@ class _$DocumentOrdering implements DocumentOrdering {
   @override
   int get hashCode => Object.hash(runtimeType, type, descending);
 
-  @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
-  _$$DocumentOrderingCopyWith<_$DocumentOrdering> get copyWith =>
-      __$$DocumentOrderingCopyWithImpl<_$DocumentOrdering>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(String customType, String field, bool descending)
-        type,
-    required TResult Function(String type, bool descending) document,
-    required TResult Function(bool descending) firstPublicationDate,
-    required TResult Function(bool descending) lastPublicationDate,
-  }) {
-    return document(this.type, descending);
+  String toString() {
+    return 'Ordering.document(type: $type, descending: $descending)';
   }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String customType, String field, bool descending)? type,
-    TResult? Function(String type, bool descending)? document,
-    TResult? Function(bool descending)? firstPublicationDate,
-    TResult? Function(bool descending)? lastPublicationDate,
-  }) {
-    return document?.call(this.type, descending);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String customType, String field, bool descending)? type,
-    TResult Function(String type, bool descending)? document,
-    TResult Function(bool descending)? firstPublicationDate,
-    TResult Function(bool descending)? lastPublicationDate,
-    required TResult orElse(),
-  }) {
-    if (document != null) {
-      return document(this.type, descending);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(TypeOrdering value) type,
-    required TResult Function(DocumentOrdering value) document,
-    required TResult Function(FirstPublicationDateOrdering value)
-        firstPublicationDate,
-    required TResult Function(LastPublicationDateOrdering value)
-        lastPublicationDate,
-  }) {
-    return document(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(TypeOrdering value)? type,
-    TResult? Function(DocumentOrdering value)? document,
-    TResult? Function(FirstPublicationDateOrdering value)? firstPublicationDate,
-    TResult? Function(LastPublicationDateOrdering value)? lastPublicationDate,
-  }) {
-    return document?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(TypeOrdering value)? type,
-    TResult Function(DocumentOrdering value)? document,
-    TResult Function(FirstPublicationDateOrdering value)? firstPublicationDate,
-    TResult Function(LastPublicationDateOrdering value)? lastPublicationDate,
-    required TResult orElse(),
-  }) {
-    if (document != null) {
-      return document(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class DocumentOrdering implements Ordering {
-  const factory DocumentOrdering(final String type, {final bool descending}) =
-      _$DocumentOrdering;
-
-  String get type;
-  @override
-  bool get descending;
-  @override
-  @JsonKey(ignore: true)
-  _$$DocumentOrderingCopyWith<_$DocumentOrdering> get copyWith =>
-      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$FirstPublicationDateOrderingCopyWith<$Res>
+abstract mixin class $DocumentOrderingCopyWith<$Res>
     implements $OrderingCopyWith<$Res> {
-  factory _$$FirstPublicationDateOrderingCopyWith(
-          _$FirstPublicationDateOrdering value,
-          $Res Function(_$FirstPublicationDateOrdering) then) =
-      __$$FirstPublicationDateOrderingCopyWithImpl<$Res>;
+  factory $DocumentOrderingCopyWith(
+          DocumentOrdering value, $Res Function(DocumentOrdering) _then) =
+      _$DocumentOrderingCopyWithImpl;
   @override
   @useResult
-  $Res call({bool descending});
+  $Res call({String type, bool descending});
 }
 
 /// @nodoc
-class __$$FirstPublicationDateOrderingCopyWithImpl<$Res>
-    extends _$OrderingCopyWithImpl<$Res, _$FirstPublicationDateOrdering>
-    implements _$$FirstPublicationDateOrderingCopyWith<$Res> {
-  __$$FirstPublicationDateOrderingCopyWithImpl(
-      _$FirstPublicationDateOrdering _value,
-      $Res Function(_$FirstPublicationDateOrdering) _then)
-      : super(_value, _then);
+class _$DocumentOrderingCopyWithImpl<$Res>
+    implements $DocumentOrderingCopyWith<$Res> {
+  _$DocumentOrderingCopyWithImpl(this._self, this._then);
 
-  @pragma('vm:prefer-inline')
+  final DocumentOrdering _self;
+  final $Res Function(DocumentOrdering) _then;
+
+  /// Create a copy of Ordering
+  /// with the given fields replaced by the non-null parameter values.
   @override
+  @pragma('vm:prefer-inline')
   $Res call({
+    Object? type = null,
     Object? descending = null,
   }) {
-    return _then(_$FirstPublicationDateOrdering(
+    return _then(DocumentOrdering(
+      null == type
+          ? _self.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as String,
       descending: null == descending
-          ? _value.descending
+          ? _self.descending
           : descending // ignore: cast_nullable_to_non_nullable
               as bool,
     ));
@@ -483,156 +449,70 @@ class __$$FirstPublicationDateOrderingCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$FirstPublicationDateOrdering implements FirstPublicationDateOrdering {
-  const _$FirstPublicationDateOrdering({this.descending = false});
+class FirstPublicationDateOrdering implements Ordering {
+  const FirstPublicationDateOrdering({this.descending = false});
 
   @override
   @JsonKey()
   final bool descending;
+
+  /// Create a copy of Ordering
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $FirstPublicationDateOrderingCopyWith<FirstPublicationDateOrdering>
+      get copyWith => _$FirstPublicationDateOrderingCopyWithImpl<
+          FirstPublicationDateOrdering>(this, _$identity);
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is FirstPublicationDateOrdering &&
+            (identical(other.descending, descending) ||
+                other.descending == descending));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, descending);
 
   @override
   String toString() {
     return 'Ordering.firstPublicationDate(descending: $descending)';
   }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$FirstPublicationDateOrdering &&
-            (identical(other.descending, descending) ||
-                other.descending == descending));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, descending);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$FirstPublicationDateOrderingCopyWith<_$FirstPublicationDateOrdering>
-      get copyWith => __$$FirstPublicationDateOrderingCopyWithImpl<
-          _$FirstPublicationDateOrdering>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(String customType, String field, bool descending)
-        type,
-    required TResult Function(String type, bool descending) document,
-    required TResult Function(bool descending) firstPublicationDate,
-    required TResult Function(bool descending) lastPublicationDate,
-  }) {
-    return firstPublicationDate(descending);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String customType, String field, bool descending)? type,
-    TResult? Function(String type, bool descending)? document,
-    TResult? Function(bool descending)? firstPublicationDate,
-    TResult? Function(bool descending)? lastPublicationDate,
-  }) {
-    return firstPublicationDate?.call(descending);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String customType, String field, bool descending)? type,
-    TResult Function(String type, bool descending)? document,
-    TResult Function(bool descending)? firstPublicationDate,
-    TResult Function(bool descending)? lastPublicationDate,
-    required TResult orElse(),
-  }) {
-    if (firstPublicationDate != null) {
-      return firstPublicationDate(descending);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(TypeOrdering value) type,
-    required TResult Function(DocumentOrdering value) document,
-    required TResult Function(FirstPublicationDateOrdering value)
-        firstPublicationDate,
-    required TResult Function(LastPublicationDateOrdering value)
-        lastPublicationDate,
-  }) {
-    return firstPublicationDate(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(TypeOrdering value)? type,
-    TResult? Function(DocumentOrdering value)? document,
-    TResult? Function(FirstPublicationDateOrdering value)? firstPublicationDate,
-    TResult? Function(LastPublicationDateOrdering value)? lastPublicationDate,
-  }) {
-    return firstPublicationDate?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(TypeOrdering value)? type,
-    TResult Function(DocumentOrdering value)? document,
-    TResult Function(FirstPublicationDateOrdering value)? firstPublicationDate,
-    TResult Function(LastPublicationDateOrdering value)? lastPublicationDate,
-    required TResult orElse(),
-  }) {
-    if (firstPublicationDate != null) {
-      return firstPublicationDate(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class FirstPublicationDateOrdering implements Ordering {
-  const factory FirstPublicationDateOrdering({final bool descending}) =
-      _$FirstPublicationDateOrdering;
-
-  @override
-  bool get descending;
-  @override
-  @JsonKey(ignore: true)
-  _$$FirstPublicationDateOrderingCopyWith<_$FirstPublicationDateOrdering>
-      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$LastPublicationDateOrderingCopyWith<$Res>
+abstract mixin class $FirstPublicationDateOrderingCopyWith<$Res>
     implements $OrderingCopyWith<$Res> {
-  factory _$$LastPublicationDateOrderingCopyWith(
-          _$LastPublicationDateOrdering value,
-          $Res Function(_$LastPublicationDateOrdering) then) =
-      __$$LastPublicationDateOrderingCopyWithImpl<$Res>;
+  factory $FirstPublicationDateOrderingCopyWith(
+          FirstPublicationDateOrdering value,
+          $Res Function(FirstPublicationDateOrdering) _then) =
+      _$FirstPublicationDateOrderingCopyWithImpl;
   @override
   @useResult
   $Res call({bool descending});
 }
 
 /// @nodoc
-class __$$LastPublicationDateOrderingCopyWithImpl<$Res>
-    extends _$OrderingCopyWithImpl<$Res, _$LastPublicationDateOrdering>
-    implements _$$LastPublicationDateOrderingCopyWith<$Res> {
-  __$$LastPublicationDateOrderingCopyWithImpl(
-      _$LastPublicationDateOrdering _value,
-      $Res Function(_$LastPublicationDateOrdering) _then)
-      : super(_value, _then);
+class _$FirstPublicationDateOrderingCopyWithImpl<$Res>
+    implements $FirstPublicationDateOrderingCopyWith<$Res> {
+  _$FirstPublicationDateOrderingCopyWithImpl(this._self, this._then);
 
-  @pragma('vm:prefer-inline')
+  final FirstPublicationDateOrdering _self;
+  final $Res Function(FirstPublicationDateOrdering) _then;
+
+  /// Create a copy of Ordering
+  /// with the given fields replaced by the non-null parameter values.
   @override
+  @pragma('vm:prefer-inline')
   $Res call({
     Object? descending = null,
   }) {
-    return _then(_$LastPublicationDateOrdering(
+    return _then(FirstPublicationDateOrdering(
       descending: null == descending
-          ? _value.descending
+          ? _self.descending
           : descending // ignore: cast_nullable_to_non_nullable
               as bool,
     ));
@@ -641,23 +521,27 @@ class __$$LastPublicationDateOrderingCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$LastPublicationDateOrdering implements LastPublicationDateOrdering {
-  const _$LastPublicationDateOrdering({this.descending = false});
+class LastPublicationDateOrdering implements Ordering {
+  const LastPublicationDateOrdering({this.descending = false});
 
   @override
   @JsonKey()
   final bool descending;
 
+  /// Create a copy of Ordering
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  String toString() {
-    return 'Ordering.lastPublicationDate(descending: $descending)';
-  }
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $LastPublicationDateOrderingCopyWith<LastPublicationDateOrdering>
+      get copyWith => _$LastPublicationDateOrderingCopyWithImpl<
+          LastPublicationDateOrdering>(this, _$identity);
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$LastPublicationDateOrdering &&
+            other is LastPublicationDateOrdering &&
             (identical(other.descending, descending) ||
                 other.descending == descending));
   }
@@ -665,99 +549,46 @@ class _$LastPublicationDateOrdering implements LastPublicationDateOrdering {
   @override
   int get hashCode => Object.hash(runtimeType, descending);
 
-  @JsonKey(ignore: true)
+  @override
+  String toString() {
+    return 'Ordering.lastPublicationDate(descending: $descending)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $LastPublicationDateOrderingCopyWith<$Res>
+    implements $OrderingCopyWith<$Res> {
+  factory $LastPublicationDateOrderingCopyWith(
+          LastPublicationDateOrdering value,
+          $Res Function(LastPublicationDateOrdering) _then) =
+      _$LastPublicationDateOrderingCopyWithImpl;
+  @override
+  @useResult
+  $Res call({bool descending});
+}
+
+/// @nodoc
+class _$LastPublicationDateOrderingCopyWithImpl<$Res>
+    implements $LastPublicationDateOrderingCopyWith<$Res> {
+  _$LastPublicationDateOrderingCopyWithImpl(this._self, this._then);
+
+  final LastPublicationDateOrdering _self;
+  final $Res Function(LastPublicationDateOrdering) _then;
+
+  /// Create a copy of Ordering
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  _$$LastPublicationDateOrderingCopyWith<_$LastPublicationDateOrdering>
-      get copyWith => __$$LastPublicationDateOrderingCopyWithImpl<
-          _$LastPublicationDateOrdering>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(String customType, String field, bool descending)
-        type,
-    required TResult Function(String type, bool descending) document,
-    required TResult Function(bool descending) firstPublicationDate,
-    required TResult Function(bool descending) lastPublicationDate,
+  $Res call({
+    Object? descending = null,
   }) {
-    return lastPublicationDate(descending);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String customType, String field, bool descending)? type,
-    TResult? Function(String type, bool descending)? document,
-    TResult? Function(bool descending)? firstPublicationDate,
-    TResult? Function(bool descending)? lastPublicationDate,
-  }) {
-    return lastPublicationDate?.call(descending);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String customType, String field, bool descending)? type,
-    TResult Function(String type, bool descending)? document,
-    TResult Function(bool descending)? firstPublicationDate,
-    TResult Function(bool descending)? lastPublicationDate,
-    required TResult orElse(),
-  }) {
-    if (lastPublicationDate != null) {
-      return lastPublicationDate(descending);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(TypeOrdering value) type,
-    required TResult Function(DocumentOrdering value) document,
-    required TResult Function(FirstPublicationDateOrdering value)
-        firstPublicationDate,
-    required TResult Function(LastPublicationDateOrdering value)
-        lastPublicationDate,
-  }) {
-    return lastPublicationDate(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(TypeOrdering value)? type,
-    TResult? Function(DocumentOrdering value)? document,
-    TResult? Function(FirstPublicationDateOrdering value)? firstPublicationDate,
-    TResult? Function(LastPublicationDateOrdering value)? lastPublicationDate,
-  }) {
-    return lastPublicationDate?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(TypeOrdering value)? type,
-    TResult Function(DocumentOrdering value)? document,
-    TResult Function(FirstPublicationDateOrdering value)? firstPublicationDate,
-    TResult Function(LastPublicationDateOrdering value)? lastPublicationDate,
-    required TResult orElse(),
-  }) {
-    if (lastPublicationDate != null) {
-      return lastPublicationDate(this);
-    }
-    return orElse();
+    return _then(LastPublicationDateOrdering(
+      descending: null == descending
+          ? _self.descending
+          : descending // ignore: cast_nullable_to_non_nullable
+              as bool,
+    ));
   }
 }
 
-abstract class LastPublicationDateOrdering implements Ordering {
-  const factory LastPublicationDateOrdering({final bool descending}) =
-      _$LastPublicationDateOrdering;
-
-  @override
-  bool get descending;
-  @override
-  @JsonKey(ignore: true)
-  _$$LastPublicationDateOrderingCopyWith<_$LastPublicationDateOrdering>
-      get copyWith => throw _privateConstructorUsedError;
-}
+// dart format on

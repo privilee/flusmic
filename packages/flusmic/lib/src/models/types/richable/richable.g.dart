@@ -8,11 +8,11 @@ part of 'richable.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$RichableHeading1 _$$RichableHeading1FromJson(Map json) => $checkedCreate(
-      r'_$RichableHeading1',
+RichableHeading1 _$RichableHeading1FromJson(Map json) => $checkedCreate(
+      'RichableHeading1',
       json,
       ($checkedConvert) {
-        final val = _$RichableHeading1(
+        final val = RichableHeading1(
           spans: $checkedConvert(
               'spans',
               (v) => (v as List<dynamic>)
@@ -26,18 +26,18 @@ _$RichableHeading1 _$$RichableHeading1FromJson(Map json) => $checkedCreate(
       },
     );
 
-Map<String, dynamic> _$$RichableHeading1ToJson(_$RichableHeading1 instance) =>
+Map<String, dynamic> _$RichableHeading1ToJson(RichableHeading1 instance) =>
     <String, dynamic>{
       'spans': instance.spans.map((e) => e.toJson()).toList(),
       'text': instance.text,
       'type': instance.type,
     };
 
-_$RichableHeading2 _$$RichableHeading2FromJson(Map json) => $checkedCreate(
-      r'_$RichableHeading2',
+RichableHeading2 _$RichableHeading2FromJson(Map json) => $checkedCreate(
+      'RichableHeading2',
       json,
       ($checkedConvert) {
-        final val = _$RichableHeading2(
+        final val = RichableHeading2(
           spans: $checkedConvert(
               'spans',
               (v) => (v as List<dynamic>)
@@ -51,18 +51,18 @@ _$RichableHeading2 _$$RichableHeading2FromJson(Map json) => $checkedCreate(
       },
     );
 
-Map<String, dynamic> _$$RichableHeading2ToJson(_$RichableHeading2 instance) =>
+Map<String, dynamic> _$RichableHeading2ToJson(RichableHeading2 instance) =>
     <String, dynamic>{
       'spans': instance.spans.map((e) => e.toJson()).toList(),
       'text': instance.text,
       'type': instance.type,
     };
 
-_$RichableHeading3 _$$RichableHeading3FromJson(Map json) => $checkedCreate(
-      r'_$RichableHeading3',
+RichableHeading3 _$RichableHeading3FromJson(Map json) => $checkedCreate(
+      'RichableHeading3',
       json,
       ($checkedConvert) {
-        final val = _$RichableHeading3(
+        final val = RichableHeading3(
           spans: $checkedConvert(
               'spans',
               (v) => (v as List<dynamic>)
@@ -76,18 +76,18 @@ _$RichableHeading3 _$$RichableHeading3FromJson(Map json) => $checkedCreate(
       },
     );
 
-Map<String, dynamic> _$$RichableHeading3ToJson(_$RichableHeading3 instance) =>
+Map<String, dynamic> _$RichableHeading3ToJson(RichableHeading3 instance) =>
     <String, dynamic>{
       'spans': instance.spans.map((e) => e.toJson()).toList(),
       'text': instance.text,
       'type': instance.type,
     };
 
-_$RichableHeading4 _$$RichableHeading4FromJson(Map json) => $checkedCreate(
-      r'_$RichableHeading4',
+RichableHeading4 _$RichableHeading4FromJson(Map json) => $checkedCreate(
+      'RichableHeading4',
       json,
       ($checkedConvert) {
-        final val = _$RichableHeading4(
+        final val = RichableHeading4(
           spans: $checkedConvert(
               'spans',
               (v) => (v as List<dynamic>)
@@ -101,18 +101,18 @@ _$RichableHeading4 _$$RichableHeading4FromJson(Map json) => $checkedCreate(
       },
     );
 
-Map<String, dynamic> _$$RichableHeading4ToJson(_$RichableHeading4 instance) =>
+Map<String, dynamic> _$RichableHeading4ToJson(RichableHeading4 instance) =>
     <String, dynamic>{
       'spans': instance.spans.map((e) => e.toJson()).toList(),
       'text': instance.text,
       'type': instance.type,
     };
 
-_$RichableHeading5 _$$RichableHeading5FromJson(Map json) => $checkedCreate(
-      r'_$RichableHeading5',
+RichableHeading5 _$RichableHeading5FromJson(Map json) => $checkedCreate(
+      'RichableHeading5',
       json,
       ($checkedConvert) {
-        final val = _$RichableHeading5(
+        final val = RichableHeading5(
           spans: $checkedConvert(
               'spans',
               (v) => (v as List<dynamic>)
@@ -126,18 +126,18 @@ _$RichableHeading5 _$$RichableHeading5FromJson(Map json) => $checkedCreate(
       },
     );
 
-Map<String, dynamic> _$$RichableHeading5ToJson(_$RichableHeading5 instance) =>
+Map<String, dynamic> _$RichableHeading5ToJson(RichableHeading5 instance) =>
     <String, dynamic>{
       'spans': instance.spans.map((e) => e.toJson()).toList(),
       'text': instance.text,
       'type': instance.type,
     };
 
-_$RichableHeading6 _$$RichableHeading6FromJson(Map json) => $checkedCreate(
-      r'_$RichableHeading6',
+RichableHeading6 _$RichableHeading6FromJson(Map json) => $checkedCreate(
+      'RichableHeading6',
       json,
       ($checkedConvert) {
-        final val = _$RichableHeading6(
+        final val = RichableHeading6(
           spans: $checkedConvert(
               'spans',
               (v) => (v as List<dynamic>)
@@ -151,18 +151,18 @@ _$RichableHeading6 _$$RichableHeading6FromJson(Map json) => $checkedCreate(
       },
     );
 
-Map<String, dynamic> _$$RichableHeading6ToJson(_$RichableHeading6 instance) =>
+Map<String, dynamic> _$RichableHeading6ToJson(RichableHeading6 instance) =>
     <String, dynamic>{
       'spans': instance.spans.map((e) => e.toJson()).toList(),
       'text': instance.text,
       'type': instance.type,
     };
 
-_$RichableParagraph _$$RichableParagraphFromJson(Map json) => $checkedCreate(
-      r'_$RichableParagraph',
+RichableParagraph _$RichableParagraphFromJson(Map json) => $checkedCreate(
+      'RichableParagraph',
       json,
       ($checkedConvert) {
-        final val = _$RichableParagraph(
+        final val = RichableParagraph(
           spans: $checkedConvert(
               'spans',
               (v) => (v as List<dynamic>)
@@ -176,18 +176,18 @@ _$RichableParagraph _$$RichableParagraphFromJson(Map json) => $checkedCreate(
       },
     );
 
-Map<String, dynamic> _$$RichableParagraphToJson(_$RichableParagraph instance) =>
+Map<String, dynamic> _$RichableParagraphToJson(RichableParagraph instance) =>
     <String, dynamic>{
       'spans': instance.spans.map((e) => e.toJson()).toList(),
       'text': instance.text,
       'type': instance.type,
     };
 
-_$RichableListItem _$$RichableListItemFromJson(Map json) => $checkedCreate(
-      r'_$RichableListItem',
+RichableListItem _$RichableListItemFromJson(Map json) => $checkedCreate(
+      'RichableListItem',
       json,
       ($checkedConvert) {
-        final val = _$RichableListItem(
+        final val = RichableListItem(
           spans: $checkedConvert(
               'spans',
               (v) => (v as List<dynamic>)
@@ -201,19 +201,19 @@ _$RichableListItem _$$RichableListItemFromJson(Map json) => $checkedCreate(
       },
     );
 
-Map<String, dynamic> _$$RichableListItemToJson(_$RichableListItem instance) =>
+Map<String, dynamic> _$RichableListItemToJson(RichableListItem instance) =>
     <String, dynamic>{
       'spans': instance.spans.map((e) => e.toJson()).toList(),
       'text': instance.text,
       'type': instance.type,
     };
 
-_$RichableOrderedListItem _$$RichableOrderedListItemFromJson(Map json) =>
+RichableOrderedListItem _$RichableOrderedListItemFromJson(Map json) =>
     $checkedCreate(
-      r'_$RichableOrderedListItem',
+      'RichableOrderedListItem',
       json,
       ($checkedConvert) {
-        final val = _$RichableOrderedListItem(
+        final val = RichableOrderedListItem(
           spans: $checkedConvert(
               'spans',
               (v) => (v as List<dynamic>)
@@ -227,19 +227,19 @@ _$RichableOrderedListItem _$$RichableOrderedListItemFromJson(Map json) =>
       },
     );
 
-Map<String, dynamic> _$$RichableOrderedListItemToJson(
-        _$RichableOrderedListItem instance) =>
+Map<String, dynamic> _$RichableOrderedListItemToJson(
+        RichableOrderedListItem instance) =>
     <String, dynamic>{
       'spans': instance.spans.map((e) => e.toJson()).toList(),
       'text': instance.text,
       'type': instance.type,
     };
 
-_$RichableImage _$$RichableImageFromJson(Map json) => $checkedCreate(
-      r'_$RichableImage',
+RichableImage _$RichableImageFromJson(Map json) => $checkedCreate(
+      'RichableImage',
       json,
       ($checkedConvert) {
-        final val = _$RichableImage(
+        final val = RichableImage(
           dimensions: $checkedConvert('dimensions',
               (v) => Dimension.fromJson(Map<String, dynamic>.from(v as Map))),
           url: $checkedConvert('url', (v) => v as String),
@@ -252,7 +252,7 @@ _$RichableImage _$$RichableImageFromJson(Map json) => $checkedCreate(
       fieldKeyMap: const {r'$type': 'type'},
     );
 
-Map<String, dynamic> _$$RichableImageToJson(_$RichableImage instance) =>
+Map<String, dynamic> _$RichableImageToJson(RichableImage instance) =>
     <String, dynamic>{
       'dimensions': instance.dimensions.toJson(),
       'url': instance.url,
@@ -261,11 +261,11 @@ Map<String, dynamic> _$$RichableImageToJson(_$RichableImage instance) =>
       'type': instance.$type,
     };
 
-_$RichableEmbed _$$RichableEmbedFromJson(Map json) => $checkedCreate(
-      r'_$RichableEmbed',
+RichableEmbed _$RichableEmbedFromJson(Map json) => $checkedCreate(
+      'RichableEmbed',
       json,
       ($checkedConvert) {
-        final val = _$RichableEmbed(
+        final val = RichableEmbed(
           info: $checkedConvert('oembed',
               (v) => EmbedData.fromJson(Map<String, dynamic>.from(v as Map))),
           type: $checkedConvert('type', (v) => v as String),
@@ -275,7 +275,7 @@ _$RichableEmbed _$$RichableEmbedFromJson(Map json) => $checkedCreate(
       fieldKeyMap: const {'info': 'oembed'},
     );
 
-Map<String, dynamic> _$$RichableEmbedToJson(_$RichableEmbed instance) =>
+Map<String, dynamic> _$RichableEmbedToJson(RichableEmbed instance) =>
     <String, dynamic>{
       'oembed': instance.info.toJson(),
       'type': instance.type,

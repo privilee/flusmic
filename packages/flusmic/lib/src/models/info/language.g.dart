@@ -8,11 +8,11 @@ part of 'language.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Language _$$_LanguageFromJson(Map json) => $checkedCreate(
-      r'_$_Language',
+_Language _$LanguageFromJson(Map json) => $checkedCreate(
+      '_Language',
       json,
       ($checkedConvert) {
-        final val = _$_Language(
+        final val = _Language(
           id: $checkedConvert('id', (v) => v as String),
           name: $checkedConvert('name', (v) => v as String),
         );
@@ -20,8 +20,7 @@ _$_Language _$$_LanguageFromJson(Map json) => $checkedCreate(
       },
     );
 
-Map<String, dynamic> _$$_LanguageToJson(_$_Language instance) =>
-    <String, dynamic>{
+Map<String, dynamic> _$LanguageToJson(_Language instance) => <String, dynamic>{
       'id': instance.id,
       'name': instance.name,
     };

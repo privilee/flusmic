@@ -7,7 +7,7 @@ part 'dimension.g.dart';
 ///
 ///Handle [width] and [height] data, used in `Image`
 @freezed
-class Dimension with _$Dimension {
+abstract class Dimension with _$Dimension {
   ///Deafult factory constructor for Dimension
   factory Dimension({
     required double height,

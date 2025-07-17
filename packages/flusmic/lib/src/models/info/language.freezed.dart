@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,157 +9,318 @@ part of 'language.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-Language _$LanguageFromJson(Map<String, dynamic> json) {
-  return _Language.fromJson(json);
-}
 
 /// @nodoc
 mixin _$Language {
-  String get id => throw _privateConstructorUsedError;
-  String get name => throw _privateConstructorUsedError;
+  String get id;
+  String get name;
 
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $LanguageCopyWith<Language> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $LanguageCopyWith<$Res> {
-  factory $LanguageCopyWith(Language value, $Res Function(Language) then) =
-      _$LanguageCopyWithImpl<$Res, Language>;
-  @useResult
-  $Res call({String id, String name});
-}
-
-/// @nodoc
-class _$LanguageCopyWithImpl<$Res, $Val extends Language>
-    implements $LanguageCopyWith<$Res> {
-  _$LanguageCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
+  /// Create a copy of Language
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @pragma('vm:prefer-inline')
+  $LanguageCopyWith<Language> get copyWith =>
+      _$LanguageCopyWithImpl<Language>(this as Language, _$identity);
+
+  /// Serializes this Language to a JSON map.
+  Map<String, dynamic> toJson();
+
   @override
-  $Res call({
-    Object? id = null,
-    Object? name = null,
-  }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is Language &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.name, name) || other.name == name));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, id, name);
+
+  @override
+  String toString() {
+    return 'Language(id: $id, name: $name)';
   }
 }
 
 /// @nodoc
-abstract class _$$_LanguageCopyWith<$Res> implements $LanguageCopyWith<$Res> {
-  factory _$$_LanguageCopyWith(
-          _$_Language value, $Res Function(_$_Language) then) =
-      __$$_LanguageCopyWithImpl<$Res>;
-  @override
+abstract mixin class $LanguageCopyWith<$Res> {
+  factory $LanguageCopyWith(Language value, $Res Function(Language) _then) =
+      _$LanguageCopyWithImpl;
   @useResult
   $Res call({String id, String name});
 }
 
 /// @nodoc
-class __$$_LanguageCopyWithImpl<$Res>
-    extends _$LanguageCopyWithImpl<$Res, _$_Language>
-    implements _$$_LanguageCopyWith<$Res> {
-  __$$_LanguageCopyWithImpl(
-      _$_Language _value, $Res Function(_$_Language) _then)
-      : super(_value, _then);
+class _$LanguageCopyWithImpl<$Res> implements $LanguageCopyWith<$Res> {
+  _$LanguageCopyWithImpl(this._self, this._then);
 
+  final Language _self;
+  final $Res Function(Language) _then;
+
+  /// Create a copy of Language
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = null,
     Object? name = null,
   }) {
-    return _then(_$_Language(
+    return _then(_self.copyWith(
       id: null == id
-          ? _value.id
+          ? _self.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
       name: null == name
-          ? _value.name
+          ? _self.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
     ));
   }
 }
 
+/// Adds pattern-matching-related methods to [Language].
+extension LanguagePatterns on Language {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_Language value)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _Language() when $default != null:
+        return $default(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_Language value) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _Language():
+        return $default(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_Language value)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _Language() when $default != null:
+        return $default(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(String id, String name)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _Language() when $default != null:
+        return $default(_that.id, _that.name);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(String id, String name) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _Language():
+        return $default(_that.id, _that.name);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(String id, String name)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _Language() when $default != null:
+        return $default(_that.id, _that.name);
+      case _:
+        return null;
+    }
+  }
+}
+
 /// @nodoc
 @JsonSerializable()
-class _$_Language implements _Language {
-  _$_Language({required this.id, required this.name});
-
-  factory _$_Language.fromJson(Map<String, dynamic> json) =>
-      _$$_LanguageFromJson(json);
+class _Language implements Language {
+  _Language({required this.id, required this.name});
+  factory _Language.fromJson(Map<String, dynamic> json) =>
+      _$LanguageFromJson(json);
 
   @override
   final String id;
   @override
   final String name;
 
+  /// Create a copy of Language
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  String toString() {
-    return 'Language(id: $id, name: $name)';
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$LanguageCopyWith<_Language> get copyWith =>
+      __$LanguageCopyWithImpl<_Language>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$LanguageToJson(
+      this,
+    );
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Language &&
+            other is _Language &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.name, name) || other.name == name));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, name);
 
-  @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
-  _$$_LanguageCopyWith<_$_Language> get copyWith =>
-      __$$_LanguageCopyWithImpl<_$_Language>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_LanguageToJson(
-      this,
-    );
+  String toString() {
+    return 'Language(id: $id, name: $name)';
   }
 }
 
-abstract class _Language implements Language {
-  factory _Language({required final String id, required final String name}) =
-      _$_Language;
-
-  factory _Language.fromJson(Map<String, dynamic> json) = _$_Language.fromJson;
-
+/// @nodoc
+abstract mixin class _$LanguageCopyWith<$Res>
+    implements $LanguageCopyWith<$Res> {
+  factory _$LanguageCopyWith(_Language value, $Res Function(_Language) _then) =
+      __$LanguageCopyWithImpl;
   @override
-  String get id;
-  @override
-  String get name;
-  @override
-  @JsonKey(ignore: true)
-  _$$_LanguageCopyWith<_$_Language> get copyWith =>
-      throw _privateConstructorUsedError;
+  @useResult
+  $Res call({String id, String name});
 }
+
+/// @nodoc
+class __$LanguageCopyWithImpl<$Res> implements _$LanguageCopyWith<$Res> {
+  __$LanguageCopyWithImpl(this._self, this._then);
+
+  final _Language _self;
+  final $Res Function(_Language) _then;
+
+  /// Create a copy of Language
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? id = null,
+    Object? name = null,
+  }) {
+    return _then(_Language(
+      id: null == id
+          ? _self.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
+      name: null == name
+          ? _self.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+// dart format on

@@ -8,11 +8,11 @@ part of 'sample_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_SampleModel _$$_SampleModelFromJson(Map json) => $checkedCreate(
-      r'_$_SampleModel',
+_SampleModel _$SampleModelFromJson(Map json) => $checkedCreate(
+      '_SampleModel',
       json,
       ($checkedConvert) {
-        final val = _$_SampleModel(
+        final val = _SampleModel(
           location: $checkedConvert('location',
               (v) => Geopoint.fromJson(Map<String, dynamic>.from(v as Map))),
           link: $checkedConvert('link',
@@ -46,7 +46,7 @@ _$_SampleModel _$$_SampleModelFromJson(Map json) => $checkedCreate(
       },
     );
 
-Map<String, dynamic> _$$_SampleModelToJson(_$_SampleModel instance) =>
+Map<String, dynamic> _$SampleModelToJson(_SampleModel instance) =>
     <String, dynamic>{
       'location': instance.location.toJson(),
       'link': instance.link.toJson(),

@@ -8,11 +8,11 @@ part of 'ref.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Ref _$$_RefFromJson(Map json) => $checkedCreate(
-      r'_$_Ref',
+_Ref _$RefFromJson(Map json) => $checkedCreate(
+      '_Ref',
       json,
       ($checkedConvert) {
-        final val = _$_Ref(
+        final val = _Ref(
           id: $checkedConvert('id', (v) => v as String),
           label: $checkedConvert('label', (v) => v as String),
           ref: $checkedConvert('ref', (v) => v as String),
@@ -22,7 +22,7 @@ _$_Ref _$$_RefFromJson(Map json) => $checkedCreate(
       },
     );
 
-Map<String, dynamic> _$$_RefToJson(_$_Ref instance) => <String, dynamic>{
+Map<String, dynamic> _$RefToJson(_Ref instance) => <String, dynamic>{
       'id': instance.id,
       'label': instance.label,
       'ref': instance.ref,

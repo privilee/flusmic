@@ -5,7 +5,7 @@ part 'sample_model.freezed.dart';
 part 'sample_model.g.dart';
 
 @freezed
-class SampleModel with _$SampleModel {
+abstract class SampleModel with _$SampleModel {
   factory SampleModel({
     required Geopoint location,
     required Linkeable link,

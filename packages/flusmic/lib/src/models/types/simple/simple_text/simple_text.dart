@@ -8,7 +8,7 @@ part 'simple_text.g.dart';
 ///
 ///Represents a text inside RichText
 @freezed
-class SimpleText with _$SimpleText {
+abstract class SimpleText with _$SimpleText {
   ///Default constructor
   factory SimpleText({
     required List<Span> spans,

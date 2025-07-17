@@ -9,7 +9,7 @@ part 'linkeable.g.dart';
 ///
 ///`MediaLinkeable`, `DocumentLinkeable` or `WebLinkeable`
 @Freezed(unionKey: 'link_type', unionValueCase: FreezedUnionCase.snake)
-class Linkeable with _$Linkeable {
+abstract class Linkeable with _$Linkeable {
   ///DocumentReference model
   ///
   ///Handle a reference to document without content
