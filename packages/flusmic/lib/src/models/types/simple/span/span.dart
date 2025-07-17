@@ -14,7 +14,7 @@ abstract class Span with _$Span {
     required String type,
     required int end,
     required int start,
-    required Map<String, dynamic> data,
+    Map<String, dynamic>? data,
   }) = _Span;
 
   ///Creates a Span object from json

@@ -17,7 +17,10 @@ _Span _$SpanFromJson(Map json) => $checkedCreate(
           end: $checkedConvert('end', (v) => (v as num).toInt()),
           start: $checkedConvert('start', (v) => (v as num).toInt()),
           data: $checkedConvert(
-              'data', (v) => Map<String, dynamic>.from(v as Map)),
+              'data',
+              (v) => (v as Map?)?.map(
+                    (k, e) => MapEntry(k as String, e),
+                  )),
         );
         return val;
       },

@@ -17,7 +17,7 @@ mixin _$Span {
   String get type;
   int get end;
   int get start;
-  Map<String, dynamic> get data;
+  Map<String, dynamic>? get data;
 
   /// Create a copy of Span
   /// with the given fields replaced by the non-null parameter values.
@@ -56,7 +56,7 @@ abstract mixin class $SpanCopyWith<$Res> {
   factory $SpanCopyWith(Span value, $Res Function(Span) _then) =
       _$SpanCopyWithImpl;
   @useResult
-  $Res call({String type, int end, int start, Map<String, dynamic> data});
+  $Res call({String type, int end, int start, Map<String, dynamic>? data});
 }
 
 /// @nodoc
@@ -74,7 +74,7 @@ class _$SpanCopyWithImpl<$Res> implements $SpanCopyWith<$Res> {
     Object? type = null,
     Object? end = null,
     Object? start = null,
-    Object? data = null,
+    Object? data = freezed,
   }) {
     return _then(_self.copyWith(
       type: null == type
@@ -89,10 +89,10 @@ class _$SpanCopyWithImpl<$Res> implements $SpanCopyWith<$Res> {
           ? _self.start
           : start // ignore: cast_nullable_to_non_nullable
               as int,
-      data: null == data
+      data: freezed == data
           ? _self.data
           : data // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>,
+              as Map<String, dynamic>?,
     ));
   }
 }
@@ -191,7 +191,7 @@ extension SpanPatterns on Span {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>(
     TResult Function(
-            String type, int end, int start, Map<String, dynamic> data)?
+            String type, int end, int start, Map<String, dynamic>? data)?
         $default, {
     required TResult orElse(),
   }) {
@@ -219,7 +219,8 @@ extension SpanPatterns on Span {
 
   @optionalTypeArgs
   TResult when<TResult extends Object?>(
-    TResult Function(String type, int end, int start, Map<String, dynamic> data)
+    TResult Function(
+            String type, int end, int start, Map<String, dynamic>? data)
         $default,
   ) {
     final _that = this;
@@ -246,7 +247,7 @@ extension SpanPatterns on Span {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
     TResult? Function(
-            String type, int end, int start, Map<String, dynamic> data)?
+            String type, int end, int start, Map<String, dynamic>? data)?
         $default,
   ) {
     final _that = this;
@@ -266,7 +267,7 @@ class _Span implements Span {
       {required this.type,
       required this.end,
       required this.start,
-      required final Map<String, dynamic> data})
+      final Map<String, dynamic>? data})
       : _data = data;
   factory _Span.fromJson(Map<String, dynamic> json) => _$SpanFromJson(json);
 
@@ -276,12 +277,14 @@ class _Span implements Span {
   final int end;
   @override
   final int start;
-  final Map<String, dynamic> _data;
+  final Map<String, dynamic>? _data;
   @override
-  Map<String, dynamic> get data {
+  Map<String, dynamic>? get data {
+    final value = _data;
+    if (value == null) return null;
     if (_data is EqualUnmodifiableMapView) return _data;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableMapView(_data);
+    return EqualUnmodifiableMapView(value);
   }
 
   /// Create a copy of Span
@@ -327,7 +330,7 @@ abstract mixin class _$SpanCopyWith<$Res> implements $SpanCopyWith<$Res> {
       __$SpanCopyWithImpl;
   @override
   @useResult
-  $Res call({String type, int end, int start, Map<String, dynamic> data});
+  $Res call({String type, int end, int start, Map<String, dynamic>? data});
 }
 
 /// @nodoc
@@ -345,7 +348,7 @@ class __$SpanCopyWithImpl<$Res> implements _$SpanCopyWith<$Res> {
     Object? type = null,
     Object? end = null,
     Object? start = null,
-    Object? data = null,
+    Object? data = freezed,
   }) {
     return _then(_Span(
       type: null == type
@@ -360,10 +363,10 @@ class __$SpanCopyWithImpl<$Res> implements _$SpanCopyWith<$Res> {
           ? _self.start
           : start // ignore: cast_nullable_to_non_nullable
               as int,
-      data: null == data
+      data: freezed == data
           ? _self._data
           : data // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>,
+              as Map<String, dynamic>?,
     ));
   }
 }
